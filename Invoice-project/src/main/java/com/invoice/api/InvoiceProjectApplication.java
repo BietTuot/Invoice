@@ -1,0 +1,14 @@
+package com.invoice.api;
+
+import org.springframework.boot.SpringApplication;
+import org.springframework.boot.autoconfigure.SpringBootApplication;
+
+@SpringBootApplication
+
+public class InvoiceProjectApplication {
+
+	public static void main(String[] args) {
+		SpringApplication.run(InvoiceProjectApplication.class, args);
+	}
+
+}

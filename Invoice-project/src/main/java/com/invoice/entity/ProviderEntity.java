@@ -8,22 +8,22 @@ import javax.persistence.Table;
 @Table(name = "provider")
 public class ProviderEntity extends BaseEntity{
 
-	@Column(name="name")
+	@Column
 	private String name;
 	
-	@Column(name="socialreason")
+	@Column
 	private String socialReason;
 	
-	@Column(name="legalstatus")
+	@Column
 	private String legalStatus;
 	
-	@Column(name="siren")
+	@Column
 	private String siren;
 	
-	@Column(name="siret")
+	@Column
 	private String siret;
 	
-	@Column(name="address")
+	@Column
 	private String address;
 
 	public String getName() {

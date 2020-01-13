@@ -8,19 +8,19 @@ import javax.persistence.Table;
 @Table(name = "account")
 public class AccountEntity extends BaseEntity{
 
-	@Column(name="providerid")
+	@Column
 	private int providerId;
 	
-	@Column(name="customerid")
+	@Column
 	private int customerId;
 	
-	@Column(name="bic")
+	@Column
 	private String bic;
 	
-	@Column(name="iban")
+	@Column
 	private String iban;
 	
-	@Column(name="bankid")
+	@Column
 	private String bankId;
 
 	public int getProviderId() {

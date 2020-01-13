@@ -10,22 +10,22 @@ import javax.persistence.Table;
 @Table(name = "payment")
 public class PaymentEntity extends BaseEntity{
 
-	@Column(name = "paymentdate") 
+	@Column 
 	private Date paymentDate;
 	
-	@Column(name = "amount")
+	@Column
 	private double amount;
 	
-	@Column(name = "currency")
+	@Column
 	private String currency;
 	
-	@Column(name = "idinvoice")
+	@Column
 	private int idInvoice;
 	
-	@Column(name = "iddebitaccount")
+	@Column
 	private int idDebitAccount;
 	
-	@Column(name = "idcreditaccount")
+	@Column
 	private int idCreditAccount;
 
 	public Date getPaymentDate() {

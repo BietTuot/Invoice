@@ -10,37 +10,37 @@ import javax.persistence.Table;
 @Table(name = "invoice")
 public class InvoiceEntity extends BaseEntity{
 	
-	@Column
+	@Column(name="providerid")
 	private long providerId;
 	
-	@Column
+	@Column(name="customerid")
 	private long customerId;
 	
-	@Column
+	@Column(name="invoicenumber")
 	private int invoiceNumber;
 	
-	@Column
+	@Column(name="invoicingdate")
 	private Date invoicingDate;
 	
-	@Column
+	@Column(name="duedate")
 	private Date dueDate;
 	
-	@Column
+	@Column(name="totalamountexcl")
 	private double totalAmountExcl;
 	
-	@Column
+	@Column(name="totalamountincl")
 	private double totalAmountIncl;
 	
-	@Column
+	@Column(name="vat")
 	private double vat;
 	
-	@Column
+	@Column(name="object")
 	private String object;
 	
-	@Column
+	@Column(name="type")
 	private String type;
 	
-	@Column
+	@Column(name="statut")
 	private String statut;
 	
 }

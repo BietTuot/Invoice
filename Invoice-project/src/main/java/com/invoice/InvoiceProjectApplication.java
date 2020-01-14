@@ -1,10 +1,10 @@
-package com.invoice.api;
+package com.invoice;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
-@SpringBootApplication
 
+@SpringBootApplication
 public class InvoiceProjectApplication {
 
 	public static void main(String[] args) {

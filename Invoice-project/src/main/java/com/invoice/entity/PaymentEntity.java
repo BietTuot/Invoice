@@ -4,6 +4,8 @@ import java.util.Date;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
+import javax.persistence.JoinColumn;
+import javax.persistence.ManyToOne;
 import javax.persistence.Table;
 
 @Entity
@@ -20,63 +22,15 @@ public class PaymentEntity extends BaseEntity{
 	private String currency;
 	
 	@Column
-	private int idInvoice;
+	private int debitAccountId;
 	
 	@Column
-	private int idDebitAccount;
+	private int creditAccountId;
 	
-	@Column
-	private int idCreditAccount;
+	@ManyToOne
+    @JoinColumn(name="invoice_id")
+    private InvoiceEntity invoice;
 
-	public Date getPaymentDate() {
-		return paymentDate;
-	}
 
-	public void setPaymentDate(Date paymentDate) {
-		this.paymentDate = paymentDate;
-	}
-
-	public double getAmount() {
-		return amount;
-	}
-
-	public void setAmount(double amount) {
-		this.amount = amount;
-	}
-
-	public String getCurrency() {
-		return currency;
-	}
-
-	public void setCurrency(String currency) {
-		this.currency = currency;
-	}
-
-	public int getIdInvoice() {
-		return idInvoice;
-	}
-
-	public void setIdInvoice(int idInvoice) {
-		this.idInvoice = idInvoice;
-	}
-
-	public int getIdDebitAccount() {
-		return idDebitAccount;
-	}
-
-	public void setIdDebitAccount(int idDebitAccount) {
-		this.idDebitAccount = idDebitAccount;
-	}
-
-	public int getIdCreditAccount() {
-		return idCreditAccount;
-	}
-
-	public void setIdCreditAccount(int idCreditAccount) {
-		this.idCreditAccount = idCreditAccount;
-	}
-	
-	
-	
 }
 

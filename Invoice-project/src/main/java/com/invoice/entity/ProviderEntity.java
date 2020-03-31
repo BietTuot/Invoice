@@ -1,12 +1,10 @@
 package com.invoice.entity;
 
-import java.util.ArrayList;
-import java.util.List;
-
 import javax.persistence.Column;
 import javax.persistence.Entity;
-import javax.persistence.OneToMany;
 import javax.persistence.Table;
+
+
 
 @Entity
 @Table(name = "provider")
@@ -30,10 +28,4 @@ public class ProviderEntity extends BaseEntity {
 	@Column
 	private String address;
 
-	@OneToMany(mappedBy = "provider")
-	private List<InvoiceEntity> invoices = new ArrayList<>();
-	
-	@OneToMany(mappedBy = "provider")
-	private List<AccountEntity> accounts = new ArrayList<>();
-	
 }

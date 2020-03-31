@@ -1,14 +1,9 @@
 package com.invoice.entity;
 
-import java.util.ArrayList;
 import java.util.Date;
-import java.util.List;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
-import javax.persistence.JoinColumn;
-import javax.persistence.ManyToOne;
-import javax.persistence.OneToMany;
 import javax.persistence.Table;
 
 @Entity
@@ -42,15 +37,7 @@ public class InvoiceEntity extends BaseEntity{
 	@Column
 	private String statut;
 	
-	@ManyToOne
-    @JoinColumn(name="customer_id")
-    private CustomerEntity customer;
-	
-	@ManyToOne
-    @JoinColumn(name="provider_id")
-    private ProviderEntity provider;
-	
-	@OneToMany(mappedBy = "invoice")
-	private List<PaymentEntity> payments = new ArrayList<>();
+	@Column
+	private Long customer_id;
 	
 }
